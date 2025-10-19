@@ -1,0 +1,35 @@
+2025-10-19 17:49:44 - pipeline - INFO - ----- Pipeline Started -----
+2025-10-19 17:49:44 - pipeline - INFO - Reading CSV file path: ../data/sales.csv
+2025-10-19 17:49:44 - pipeline - INFO - Reading JSON file path: ../data/products.json
+2025-10-19 17:49:44 - pipeline - INFO - Reading Parquet file: ../data/region.parquet
+2025-10-19 17:49:44 - pipeline - INFO - Merging dataframes
+2025-10-19 17:49:44 - pipeline - INFO - Merged Dataframe Shape: (23, 5)
+2025-10-19 17:52:42 - pipeline - INFO - ----- Pipeline Started -----
+2025-10-19 17:52:42 - pipeline - INFO - Reading CSV file path: ../data/sales.csv
+2025-10-19 17:52:42 - pipeline - INFO - Reading JSON file path: ../data/products.json
+2025-10-19 17:52:42 - pipeline - INFO - Reading Parquet file: ../data/region.parquet
+2025-10-19 17:52:42 - pipeline - INFO - Merging dataframes
+2025-10-19 17:52:42 - pipeline - INFO - Merged Dataframe Shape: (23, 5)
+2025-10-19 17:52:42 - pipeline - INFO - ----- Pipeline Completed -----
+2025-10-19 17:54:00 - pipeline - INFO - ----- Pipeline Started -----
+2025-10-19 17:54:00 - pipeline - INFO - Reading CSV file path: ../data/sales.csv
+2025-10-19 17:54:00 - pipeline - INFO - Reading JSON file path: ../data/products.json
+2025-10-19 17:54:00 - pipeline - INFO - Reading Parquet file: ../data/region.parquet
+2025-10-19 17:54:00 - pipeline - INFO - Merging dataframes
+2025-10-19 17:54:00 - pipeline - INFO - Merged Dataframe Shape: (23, 5)
+2025-10-19 17:54:00 - pipeline - INFO - ----- Pipeline Completed -----
+2025-10-19 17:58:30 - pipeline - INFO - ----- Pipeline Started -----
+2025-10-19 17:58:30 - pipeline - INFO - Reading CSV file path: ../data/sales.csv
+2025-10-19 17:58:30 - pipeline - INFO - Reading JSON file path: ../data/products.json
+2025-10-19 17:58:30 - pipeline - INFO - Reading Parquet file: ../data/region.parquet
+2025-10-19 17:58:30 - pipeline - INFO - Merging dataframes
+2025-10-19 17:58:30 - pipeline - INFO - Merged Dataframe Shape: (23, 5)
+2025-10-19 17:58:30 - pipeline - INFO - ----- Pipeline Completed -----
+2025-10-19 18:02:45 - pipeline - INFO - ----- Pipeline Started -----
+2025-10-19 18:02:45 - pipeline - INFO - Reading CSV file path: ../data/sales.csv
+2025-10-19 18:02:45 - pipeline - INFO - Reading JSON file path: ../data/products.json
+2025-10-19 18:02:45 - pipeline - INFO - Reading Parquet file: ../data/region.parquet
+2025-10-19 18:02:45 - pipeline - INFO - Merging dataframes
+2025-10-19 18:02:45 - pipeline - INFO - Merged Dataframe Shape: (23, 5)
+2025-10-19 18:02:45 - pipeline - INFO - Data merged successfully: D:/GitHub/Big Data Engineer/ETL Mini Project/data/merged_data.csv
+2025-10-19 18:02:45 - pipeline - INFO - ----- Pipeline Completed -----
