@@ -1,0 +1,26 @@
+[   
+  {"product_id": 101, "product_name": "Keyboard"}, 
+  {"product_id": 102, "product_name": "Mouse"}, 
+  {"product_id": 103, "product_name": "Monitor"},
+  {"product_id": 104, "product_name": "Laptop"},
+  {"product_id": 105, "product_name": "Webcam"},
+  {"product_id": 106, "product_name": "USB-C Hub"},
+  {"product_id": 107, "product_name": "External Hard Drive"},
+  {"product_id": 108, "product_name": "Wireless Charger"},
+  {"product_id": 109, "product_name": "Bluetooth Speaker"},
+  {"product_id": 110, "product_name": "Smartphone Stand"},
+  {"product_id": 111, "product_name": "Noise Cancelling Headphones"},
+  {"product_id": 112, "product_name": "Graphics Tablet"},
+  {"product_id": 113, "product_name": "Ergonomic Chair"},
+  {"product_id": 114, "product_name": "Standing Desk"},
+  {"product_id": 115, "product_name": "LED Desk Lamp"},
+  {"product_id": 116, "product_name": "Portable Projector"},
+  {"product_id": 117, "product_name": "Smartwatch"},
+  {"product_id": 118, "product_name": "Fitness Tracker"},
+  {"product_id": 119, "product_name": "Gaming Mouse"},
+  {"product_id": 120, "product_name": "Mechanical Keyboard"},
+  {"product_id": 121, "product_name": "Laptop Cooling Pad"},
+  {"product_id": 122, "product_name": "Wireless Earbuds"},
+  {"product_id": 123, "product_name": "HDMI Cable"}
+]
+
