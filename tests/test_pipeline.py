@@ -5,7 +5,8 @@ from src_3.pipeline3 import Datapipeline
 
 @pytest.fixture
 def pipeline():
-    return Datapipeline(config_path="../config/config.yaml")
+    config_path = os.path.join(os.path.dirname(__file__), '..', 'config', 'config.yaml')
+    return Datapipeline(config_path=config_path)
 
 def test_config_load(pipeline):
     assert "data_paths" in pipeline.config
