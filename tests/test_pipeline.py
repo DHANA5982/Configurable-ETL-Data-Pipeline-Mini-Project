@@ -5,7 +5,7 @@ from src_3.pipeline3 import Datapipeline
 
 @pytest.fixture
 def pipeline():
-    return Datapipeline(config_path="D:/GitHub/Big Data Engineer/ETL Mini Project/config/config.yaml")
+    return Datapipeline(config_path="../config/config.yaml")
 
 def test_config_load(pipeline):
     assert "data_paths" in pipeline.config
