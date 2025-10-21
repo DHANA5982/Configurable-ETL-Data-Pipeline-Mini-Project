@@ -10,7 +10,6 @@ logging:
   log_level: "INFO"
 
 database:
-  type: "sqlite"
   name: "D:/GitHub/Big Data Engineer/ETL Mini Project/data/merged.db"
   table: "merged_table"
 
