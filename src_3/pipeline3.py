@@ -92,7 +92,7 @@ class Datapipeline:
             conn = sqlite3.connect(db_name)
             df.to_sql(table, conn, if_exists='replace', index=False)
             conn.close()
-            logging.info(f'Data successfully loaded into: {self.db_config['type']}.')
+            logging.info(f'Data successfully loaded into: {db_name}.')
         except Exception as e:
             logging.exception(f'Error load data into DB: {e}')
 
