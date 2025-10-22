@@ -3,16 +3,24 @@ import yaml
 import logging
 import argparse
 import pandas as pd
-import sqlite3
+from dotenv import load_dotenv
+from sqlalchemy import create_engine
+from sqlalchemy.exc import SQLAlchemyError
 
-
+load_dotenv()
 class Datapipeline:
-    def __init__(self, config_path = 'D:/GitHub/Big Data Engineer/ETL Mini Project/config/config.yaml'):
+    def __init__(self, config_path = '../config/config.yaml'):
         self.config = self.load_config(config_path)
         self.log_dir = self.config['logging']['log_dir']
         self.setup_logger()
         self.data_paths = self.config['data_paths']
         self.db_config = self.config['database']
+        # Override YAML values with .env if they exist
+        self.db_config["user"] = os.getenv("POSTGRES_USER", self.db_config.get("user"))
+        self.db_config["password"] = os.getenv("POSTGRES_PASSWORD", self.db_config.get("password"))
+        self.db_config["host"] = os.getenv("POSTGRES_HOST", self.db_config.get("host"))
+        self.db_config["port"] = os.getenv("POSTGRES_PORT", self.db_config.get("port"))
+        self.db_config["name"] = os.getenv("POSTGRES_DB", self.db_config.get("name"))
 
     # ---------------- Configuration ---------------- #
     def load_config(self, path: str):
@@ -84,17 +92,30 @@ class Datapipeline:
 
     # ---------------- Database Load ---------------- #
     def load_to_db(self, df):
+        db = self.db_config
         try:
-            db_name = self.db_config['name']
-            table = self.db_config['table']
-            logging.info(f'Loading data into DB: {db_name}, Table: {table}')
+            if db['type'] == 'postgres':
+                connection_string = (
+                    f"postgresql+psycopg2://{db['user']}:{db['password']}"
+                    f"@{db['host']}:{db['port']}/{db['name']}"
+                )
+            elif db['type'] == 'sqlite':
+                connection_string = f"sqlite:///{db['name']}"
+            else:
+                logging.error(f'Unsupported database type: {db['type']}')
+                return
+            
+            logging.info(f'Connecting to DB: {connection_string}')
+            engine = create_engine(connection_string)
 
-            conn = sqlite3.connect(db_name)
-            df.to_sql(table, conn, if_exists='replace', index=False)
-            conn.close()
-            logging.info(f'Data successfully loaded into: {db_name}.')
-        except Exception as e:
-            logging.exception(f'Error load data into DB: {e}')
+            df.to_sql(db['table'], engine, if_exists='replace', index=False)
+            logging.info(f'Data successfully loaded into: {db['table']}')
+        except SQLAlchemyError as e:
+            logging.exception(f'Database load failed: {e}')
+
+        finally:
+            if 'engine' in locals():
+                engine.dispose()
 
     # ---------------- Final Executer ---------------- #
     def run(self, override_config=None):
@@ -119,7 +140,7 @@ class Datapipeline:
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Run configurable ETL pipeline')
-    parser.add_argument('--config', type=str, default="D:/GitHub/Big Data Engineer/ETL Mini Project/config/config.yaml", help='Path to config file')
+    parser.add_argument('--config', type=str, default="../config/config.yaml", help='Path to config file')
     parser.add_argument('--csv_file', type=str, help='Override CSV path')
     parser.add_argument('--json_file', type=str, help='Overrid JSON path')
     parser.add_argument('--parquet_file', type=str, help='Override Parquet path')
