@@ -102,14 +102,14 @@ class Datapipeline:
             elif db['type'] == 'sqlite':
                 connection_string = f"sqlite:///{db['name']}"
             else:
-                logging.error(f'Unsupported database type: {db['type']}')
+                logging.error(f"Unsupported database type: {db['type']}")
                 return
             
             logging.info(f'Connecting to DB: {connection_string}')
             engine = create_engine(connection_string)
 
             df.to_sql(db['table'], engine, if_exists='replace', index=False)
-            logging.info(f'Data successfully loaded into: {db['table']}')
+            logging.info(f"Data successfully loaded into: {db['table']}")
         except SQLAlchemyError as e:
             logging.exception(f'Database load failed: {e}')
 
