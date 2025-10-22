@@ -1,16 +1,21 @@
 data_paths:
-  csv_file: "D:/GitHub/Big Data Engineer/ETL Mini Project/data/sales.csv"
-  json_file: "D:/GitHub/Big Data Engineer/ETL Mini Project/data/products.json"
-  parquet_file: "D:/GitHub/Big Data Engineer/ETL Mini Project/data/region.parquet"
-  output_file: "D:/GitHub/Big Data Engineer/ETL Mini Project/data/merged_data_3.csv"
+  csv_file: "../data/sales.csv"
+  json_file: "../data/products.json"
+  parquet_file: "../data/region.parquet"
+  output_file: "../data/merged_data.csv"
 
 logging:
-  log_dir: "D:/GitHub/Big Data Engineer/ETL Mini Project/logs"
-  log_file: "Pipeline3.log"
+  log_dir: "../logs"
+  log_file: "Pipeline.log"
   log_level: "INFO"
 
 database:
-  name: "D:/GitHub/Big Data Engineer/ETL Mini Project/data/merged.db"
+  type: "postgres"
+  host: "localhost"
+  port: 5432
+  user: "postgres"
+  password: "admin"
+  name: "merged_data_db"
   table: "merged_table"
 
 pipeline:
