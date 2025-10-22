@@ -1,0 +1,40 @@
+2025-10-22 17:47:45 - root - [INFO] - Logger initailised from config.
+2025-10-22 17:47:45 - root - [INFO] - ----- Pipeline Execution Started -----
+2025-10-22 17:47:45 - root - [INFO] - Extracting Data...
+2025-10-22 17:47:45 - root - [INFO] - Reading CSV file: ../data/sales.csv
+2025-10-22 17:47:45 - root - [INFO] - Reading JSON file: ../data/products.json
+2025-10-22 17:47:45 - root - [INFO] - Reading PARQUET file: ../data/region.parquet
+2025-10-22 17:47:45 - root - [INFO] - Merging datasets...
+2025-10-22 17:47:45 - root - [INFO] - Merge complete. Dataframe shape: (23, 5)
+2025-10-22 17:47:45 - root - [INFO] - Loading Data...
+2025-10-22 17:47:45 - root - [INFO] - Data saved: ../data/merged_data.csv
+2025-10-22 17:47:45 - root - [INFO] - Connecting to DB: postgresql+psycopg2://postgres:admin@localhost:5432/merged_data_db
+2025-10-22 17:47:45 - root - [INFO] - Data successfully loaded into: merged_table
+2025-10-22 17:47:45 - root - [INFO] - ----- Pipeline Execution Completed -----
+2025-10-22 17:51:36 - root - [INFO] - Logger initailised from config.
+2025-10-22 17:51:36 - root - [INFO] - ----- Pipeline Execution Started -----
+2025-10-22 17:51:36 - root - [INFO] - Overriding config values: {'output_file': '../data/merged_data.parquet', 'output_format': 'parquet'}
+2025-10-22 17:51:36 - root - [INFO] - Extracting Data...
+2025-10-22 17:51:36 - root - [INFO] - Reading CSV file: ../data/sales.csv
+2025-10-22 17:51:36 - root - [INFO] - Reading JSON file: ../data/products.json
+2025-10-22 17:51:36 - root - [INFO] - Reading PARQUET file: ../data/region.parquet
+2025-10-22 17:51:36 - root - [INFO] - Merging datasets...
+2025-10-22 17:51:36 - root - [INFO] - Merge complete. Dataframe shape: (23, 5)
+2025-10-22 17:51:36 - root - [INFO] - Loading Data...
+2025-10-22 17:51:36 - root - [INFO] - Data saved: ../data/merged_data.parquet
+2025-10-22 17:51:36 - root - [INFO] - Connecting to DB: postgresql+psycopg2://postgres:admin@localhost:5432/merged_data_db
+2025-10-22 17:51:36 - root - [INFO] - Data successfully loaded into: merged_table
+2025-10-22 17:51:36 - root - [INFO] - ----- Pipeline Execution Completed -----
+2025-10-22 18:12:58 - root - [INFO] - Logger initailised from config.
+2025-10-22 18:12:58 - root - [INFO] - ----- Pipeline Execution Started -----
+2025-10-22 18:12:58 - root - [INFO] - Extracting Data...
+2025-10-22 18:12:58 - root - [INFO] - Reading CSV file: ../data/sales.csv
+2025-10-22 18:12:58 - root - [INFO] - Reading JSON file: ../data/products.json
+2025-10-22 18:12:58 - root - [INFO] - Reading PARQUET file: ../data/region.parquet
+2025-10-22 18:12:58 - root - [INFO] - Merging datasets...
+2025-10-22 18:12:58 - root - [INFO] - Merge complete. Dataframe shape: (23, 5)
+2025-10-22 18:12:58 - root - [INFO] - Loading Data...
+2025-10-22 18:12:58 - root - [INFO] - Data saved: ../data/merged_data.csv
+2025-10-22 18:12:58 - root - [INFO] - Connecting to DB: postgresql+psycopg2://postgres:admin@localhost:5432/merged_data_db
+2025-10-22 18:12:58 - root - [INFO] - Data successfully loaded into: merged_table
+2025-10-22 18:12:58 - root - [INFO] - ----- Pipeline Execution Completed -----
