@@ -1,0 +1,24 @@
+order_id,product_id,quantity,product_name,region
+1,101,2,Keyboard,China
+2,102,1,Mouse,India
+3,103,4,Monitor,EU
+4,104,2,Laptop,China
+5,105,3,Webcam,EU
+6,106,1,USB-C Hub,EU
+7,107,5,External Hard Drive,China
+8,108,2,Wireless Charger,EU
+9,109,3,Bluetooth Speaker,India
+10,110,1,Smartphone Stand,India
+11,111,4,Noise Cancelling Headphones,China
+12,112,2,Graphics Tablet,India
+13,113,3,Ergonomic Chair,EU
+14,114,1,Standing Desk,EU
+15,115,5,LED Desk Lamp,China
+16,116,2,Portable Projector,EU
+17,117,3,Smartwatch,EU
+18,118,1,Fitness Tracker,China
+19,119,4,Gaming Mouse,China
+20,120,2,Mechanical Keyboard,China
+21,121,3,Laptop Cooling Pad,India
+22,122,5,Wireless Earbuds,China
+23,123,2,HDMI Cable,India
