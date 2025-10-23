@@ -9,7 +9,7 @@ from sqlalchemy.exc import SQLAlchemyError
 
 load_dotenv()
 class Datapipeline:
-    def __init__(self, config_path = '../config/config.yaml'):
+    def __init__(self, config_path = os.path.join(os.path.dirname(__file__), '..', 'config', 'config.yaml')):
         self.config = self.load_config(config_path)
         self.log_dir = self.config['logging']['log_dir']
         self.setup_logger()
@@ -140,7 +140,7 @@ class Datapipeline:
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Run configurable ETL pipeline')
-    parser.add_argument('--config', type=str, default="../config/config.yaml", help='Path to config file')
+    parser.add_argument('--config', type=str, default=os.path.join(os.path.dirname(__file__), '..', 'config', 'config.yaml'), help='Path to config file')
     parser.add_argument('--csv_file', type=str, help='Override CSV path')
     parser.add_argument('--json_file', type=str, help='Overrid JSON path')
     parser.add_argument('--parquet_file', type=str, help='Override Parquet path')
