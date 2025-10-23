@@ -11,10 +11,10 @@ logging:
 
 database:
   type: "postgres"
-  host: "localhost"
+  host: "postgres"
   port: 5432
   user: "postgres"
-  password: "admin"
+  password: "postgres"
   name: "merged_data_db"
   table: "merged_table"
 
